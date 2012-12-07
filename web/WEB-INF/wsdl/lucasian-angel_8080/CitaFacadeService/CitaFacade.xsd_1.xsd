@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://facades.dentalspa.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://facades.dentalspa.com/">
+
+<xs:element name="asignarCita" type="tns:asignarCita"/>
+
+<xs:element name="asignarCitaResponse" type="tns:asignarCitaResponse"/>
+
+<xs:element name="listAll" type="tns:listAll"/>
+
+<xs:element name="listAllResponse" type="tns:listAllResponse"/>
+
+<xs:complexType name="asignarCita">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long" minOccurs="0"/>
+<xs:element name="arg1" type="xs:long" minOccurs="0"/>
+<xs:element name="arg2" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="asignarCitaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cita" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cita">
+<xs:sequence>
+<xs:element name="dentista" type="tns:dentista" minOccurs="0"/>
+<xs:element name="fechaCita" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="usuario" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dentista">
+<xs:sequence>
+<xs:element name="citasAgendadas" type="tns:cita" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="especialidad" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="apellidoMAterno" type="xs:string" minOccurs="0"/>
+<xs:element name="apellidoPaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="citas" type="tns:cita" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://lucasian-angel:8080/CitaFacadeService/CitaFacade?wsdl" uri="src/conf/xml-resources/web-service-references/CitaFacade/wsdl/lucasian-angel_8080/CitaFacadeService/CitaFacade.wsdl"/>
+    <system systemId="http://lucasian-angel:8080/CitaFacadeService/CitaFacade?xsd=1" uri="src/conf/xml-resources/web-service-references/CitaFacade/wsdl/lucasian-angel_8080/CitaFacadeService/CitaFacade.xsd_1.xsd"/>
+    <system systemId="http://soaptest.parasoft.com/calculator.wsdl" uri="src/conf/xml-resources/web-service-references/calculator/wsdl/soaptest.parasoft.com/calculator.wsdl"/>
+</catalog>
